@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://b3mxnumecfni3"]
+
+[ext_resource type="Texture2D" uid="uid://bucwq0lojbrhc" path="res://images/twoChapter/school-cabinet.jpg" id="1_0fvus"]
+[ext_resource type="Script" uid="uid://1xjkvbf3g8i" path="res://scenes/twoChapter/five_scene.gd" id="1_nvv7h"]
+[ext_resource type="Texture2D" uid="uid://cowcs2r64kpdo" path="res://images/icons/home-icon.png" id="3_rgjxd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rlpxo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nkwsu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p16ko"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q04ny"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a2nkm"]
+
+[node name="five_scene" type="Control" unique_id=426806298]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nvv7h")
+
+[node name="SchoolCabinet" type="Sprite2D" parent="." unique_id=167288614]
+position = Vector2(575.5, 323.49997)
+scale = Vector2(0.74934894, 0.6318359)
+texture = ExtResource("1_0fvus")
+
+[node name="text" type="Label" parent="." unique_id=427237789]
+layout_mode = 0
+offset_left = 44.000004
+offset_top = 543.0
+offset_right = 1070.0
+offset_bottom = 578.0
+
+[node name="skip" type="Button" parent="." unique_id=1746949938]
+layout_mode = 0
+offset_top = 526.00006
+offset_right = 48.959263
+offset_bottom = 540.7775
+scale = Vector2(23.529768, 8.262663)
+
+[node name="home" type="Button" parent="." unique_id=555695629]
+layout_mode = 0
+offset_left = 1087.0
+offset_top = 1.0
+offset_right = 1151.0
+offset_bottom = 57.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlpxo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_nkwsu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p16ko")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_q04ny")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_a2nkm")
+
+[node name="HomeIcon" type="Sprite2D" parent="home" unique_id=1182311597]
+position = Vector2(32.5, 28)
+scale = Vector2(0.12695305, 0.11328125)
+texture = ExtResource("3_rgjxd")

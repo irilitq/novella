@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://c1y4x7maek178"]
+
+[ext_resource type="Texture2D" uid="uid://b285xmgwhtneh" path="res://images/firstChapter/rostov-room.jpg" id="1_e7htg"]
+[ext_resource type="Script" uid="uid://be2q31ex0cpeg" path="res://scenes/firstChapter/two_scene.gd" id="1_x1sa4"]
+[ext_resource type="Texture2D" uid="uid://cowcs2r64kpdo" path="res://images/icons/home-icon.png" id="2_x1sa4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2e28u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gp1rq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vl3jv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hnire"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qkpwd"]
+
+[node name="two_scene" type="Control" unique_id=17506949]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x1sa4")
+
+[node name="RostovRoom" type="Sprite2D" parent="." unique_id=1910044852]
+position = Vector2(575.5, 322.50003)
+scale = Vector2(0.687201, 0.68756646)
+texture = ExtResource("1_e7htg")
+
+[node name="home" type="Button" parent="." unique_id=16510926]
+layout_mode = 0
+offset_left = 1087.0
+offset_top = 1.0
+offset_right = 1151.0
+offset_bottom = 57.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2e28u")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gp1rq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vl3jv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hnire")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qkpwd")
+
+[node name="HomeIcon" type="Sprite2D" parent="home" unique_id=202450539]
+position = Vector2(32.5, 28)
+scale = Vector2(0.12695305, 0.11328125)
+texture = ExtResource("2_x1sa4")
+
+[node name="skip" type="Button" parent="." unique_id=1599479665]
+layout_mode = 0
+offset_top = 526.00006
+offset_right = 48.959263
+offset_bottom = 540.7775
+scale = Vector2(23.529768, 8.262663)
+
+[node name="text" type="Label" parent="." unique_id=5877436]
+layout_mode = 0
+offset_left = 44.000004
+offset_top = 543.0
+offset_right = 1070.0
+offset_bottom = 578.0
+text = "Был обычный майский день."

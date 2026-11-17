@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://besfg3bbsjk5x"]
+
+[ext_resource type="Script" uid="uid://c2pxn8o35xcaj" path="res://scenes/firstChapter/six_scene.gd" id="1_g133d"]
+[ext_resource type="AudioStream" uid="uid://dku7mhowhctf3" path="res://musics/city.mp3" id="1_jhjdw"]
+[ext_resource type="Texture2D" uid="uid://tsbyi6ptpt8i" path="res://images/firstChapter/bryansk-home.jpg" id="2_1xrdp"]
+[ext_resource type="Texture2D" uid="uid://cowcs2r64kpdo" path="res://images/icons/home-icon.png" id="2_g133d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1xrdp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rbk2i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_al7n2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_55n4u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ion4u"]
+
+[node name="six_scene" type="Control" unique_id=1186556234]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g133d")
+
+[node name="BryanskHome" type="Sprite2D" parent="." unique_id=318120894]
+position = Vector2(576, 324)
+scale = Vector2(0.75789475, 0.62669253)
+texture = ExtResource("2_1xrdp")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=575519108]
+stream = ExtResource("1_jhjdw")
+volume_db = 2.7
+autoplay = true
+parameters/looping = true
+
+[node name="home" type="Button" parent="." unique_id=710756930]
+layout_mode = 0
+offset_left = 1087.0
+offset_top = 1.0
+offset_right = 1151.0
+offset_bottom = 57.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1xrdp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rbk2i")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_al7n2")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_55n4u")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ion4u")
+
+[node name="HomeIcon" type="Sprite2D" parent="home" unique_id=1484161806]
+position = Vector2(32.5, 28)
+scale = Vector2(0.12695305, 0.11328125)
+texture = ExtResource("2_g133d")
+
+[node name="skip" type="Button" parent="." unique_id=1756386029]
+layout_mode = 0
+offset_top = 526.00006
+offset_right = 48.959263
+offset_bottom = 540.7775
+scale = Vector2(23.529768, 8.262663)
+
+[node name="text" type="Label" parent="." unique_id=1465150338]
+layout_mode = 0
+offset_left = 44.000004
+offset_top = 543.0
+offset_right = 1070.0
+offset_bottom = 578.0

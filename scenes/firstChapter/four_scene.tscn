@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://ieh1vvvp7j32"]
+
+[ext_resource type="Texture2D" uid="uid://bepx85kpbvlf1" path="res://images/firstChapter/poezd.jpg" id="1_8rhdr"]
+[ext_resource type="Script" uid="uid://cegxo83uw6iyj" path="res://scenes/firstChapter/four_scene.gd" id="1_wj7gl"]
+[ext_resource type="Texture2D" uid="uid://cowcs2r64kpdo" path="res://images/icons/home-icon.png" id="2_p2mvk"]
+[ext_resource type="AudioStream" uid="uid://cmiacit0h1wl6" path="res://musics/поезд.mp3" id="3_wj7gl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hupbb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ixhr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3vevr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oqmiq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uwll1"]
+
+[node name="four_scene" type="Control" unique_id=102567061]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wj7gl")
+
+[node name="Poezd" type="Sprite2D" parent="." unique_id=900828997]
+position = Vector2(576.50006, 323.49997)
+scale = Vector2(0.79488957, 0.59576434)
+texture = ExtResource("1_8rhdr")
+
+[node name="home" type="Button" parent="." unique_id=326359794]
+layout_mode = 0
+offset_left = 1087.0
+offset_top = 1.0
+offset_right = 1151.0
+offset_bottom = 57.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hupbb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3ixhr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3vevr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_oqmiq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uwll1")
+
+[node name="HomeIcon" type="Sprite2D" parent="home" unique_id=1181985278]
+position = Vector2(32.5, 28)
+scale = Vector2(0.12695305, 0.11328125)
+texture = ExtResource("2_p2mvk")
+
+[node name="skip" type="Button" parent="." unique_id=473975324]
+layout_mode = 0
+offset_top = 526.00006
+offset_right = 48.959263
+offset_bottom = 540.7775
+scale = Vector2(23.529768, 8.262663)
+
+[node name="text" type="Label" parent="." unique_id=2004463948]
+layout_mode = 0
+offset_left = 44.000004
+offset_top = 543.0
+offset_right = 1070.0
+offset_bottom = 578.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=352250653]
+stream = ExtResource("3_wj7gl")
+volume_db = 2.7
+autoplay = true
+parameters/looping = false

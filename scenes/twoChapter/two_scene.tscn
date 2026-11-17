@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://87t06rxg8t5p"]
+
+[ext_resource type="Texture2D" uid="uid://boxojqstwyhtw" path="res://images/twoChapter/street.jpg" id="1_aqb6l"]
+[ext_resource type="Script" uid="uid://bwigbasym0al2" path="res://scenes/twoChapter/two_scene.gd" id="1_oqlk2"]
+[ext_resource type="AudioStream" uid="uid://dku7mhowhctf3" path="res://musics/city.mp3" id="2_oqlk2"]
+[ext_resource type="Texture2D" uid="uid://cowcs2r64kpdo" path="res://images/icons/home-icon.png" id="3_eqpjl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s82qp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_shurf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4fw4k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ur6jr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ey4bt"]
+
+[node name="two_chapter" type="Control" unique_id=729922593]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oqlk2")
+
+[node name="Street" type="Sprite2D" parent="." unique_id=471355812]
+position = Vector2(577, 324)
+scale = Vector2(0.75, 0.6328125)
+texture = ExtResource("1_aqb6l")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=688115570]
+stream = ExtResource("2_oqlk2")
+volume_db = 2.7
+autoplay = true
+parameters/looping = true
+
+[node name="home" type="Button" parent="." unique_id=2139670876]
+layout_mode = 0
+offset_left = 1087.0
+offset_top = 1.0
+offset_right = 1151.0
+offset_bottom = 57.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s82qp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_shurf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4fw4k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ur6jr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ey4bt")
+
+[node name="HomeIcon" type="Sprite2D" parent="home" unique_id=1975367583]
+position = Vector2(32.5, 28)
+scale = Vector2(0.12695305, 0.11328125)
+texture = ExtResource("3_eqpjl")
+
+[node name="skip" type="Button" parent="." unique_id=747500608]
+layout_mode = 0
+offset_top = 526.00006
+offset_right = 48.959263
+offset_bottom = 540.7775
+scale = Vector2(23.529768, 8.262663)
+
+[node name="text" type="Label" parent="." unique_id=718911107]
+layout_mode = 0
+offset_left = 44.000004
+offset_top = 543.0
+offset_right = 1070.0
+offset_bottom = 578.0

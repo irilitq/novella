@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://b3ikbhngn4jp4"]
+
+[ext_resource type="Script" uid="uid://c2eh0t36heirx" path="res://scenes/mainScenes/start_scene.gd" id="1_ctfta"]
+[ext_resource type="Texture2D" uid="uid://ctlc1rabddaio" path="res://images/background.jpg" id="2_hxct4"]
+[ext_resource type="AudioStream" uid="uid://c75gx8lorlstj" path="res://musics/песня-у-костра.mp3" id="3_hxct4"]
+
+[node name="startScene" type="Control" unique_id=416761750]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ctfta")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=65451197]
+position = Vector2(576.00006, 324.00003)
+scale = Vector2(1.5567567, 1.5576924)
+texture = ExtResource("2_hxct4")
+
+[node name="playButton" type="Button" parent="." unique_id=1256212367]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 245.0
+offset_right = 663.0
+offset_bottom = 296.0
+theme_override_colors/font_color = Color(0.6880681, 0.16313726, 0.25037324, 1)
+text = "Играть"
+
+[node name="settingButton" type="Button" parent="." unique_id=1996888832]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 326.0
+offset_right = 663.0
+offset_bottom = 377.0
+theme_override_colors/font_color = Color(0.6862745, 0.16470589, 0.2509804, 1)
+text = "Настройки"
+
+[node name="exitButton" type="Button" parent="." unique_id=1787585463]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 407.0
+offset_right = 663.0
+offset_bottom = 458.0
+theme_override_colors/font_color = Color(0.6862745, 0.16470589, 0.2509804, 1)
+text = "Выйти
+"
+
+[node name="Label" type="Label" parent="." unique_id=1760329599]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 79.0
+offset_right = 664.0
+offset_bottom = 147.0
+theme_override_colors/font_color = Color(0.6862745, 0.16470589, 0.2509804, 1)
+theme_override_font_sizes/font_size = 26
+text = "Новелла"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=35686800]
+stream = ExtResource("3_hxct4")
+volume_db = 2.7
+autoplay = true
+parameters/looping = false

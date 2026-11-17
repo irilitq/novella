@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bccm5votelkve"]
+
+[ext_resource type="Script" uid="uid://dx1grdlupj0vc" path="res://scenes/firstChapter/three_scene.gd" id="1_2sddr"]
+[ext_resource type="Texture2D" uid="uid://bhtrc04168x1j" path="res://images/firstChapter/station-rostov.jpg" id="2_5trvs"]
+[ext_resource type="Texture2D" uid="uid://cowcs2r64kpdo" path="res://images/icons/home-icon.png" id="3_kdbca"]
+[ext_resource type="AudioStream" uid="uid://cm0whq074kwvt" path="res://musics/жд-вокзал.mp3" id="4_5trvs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_klmko"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_npwpn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fdx2m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_208ku"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yr15b"]
+
+[node name="threeScene" type="Control" unique_id=232076509]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2sddr")
+
+[node name="StationRostov" type="Sprite2D" parent="." unique_id=1782223379]
+position = Vector2(576, 323.5)
+scale = Vector2(0.6889952, 0.6875664)
+texture = ExtResource("2_5trvs")
+
+[node name="home" type="Button" parent="." unique_id=791031050]
+layout_mode = 0
+offset_left = 1087.0
+offset_top = 1.0
+offset_right = 1151.0
+offset_bottom = 57.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_klmko")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_npwpn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fdx2m")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_208ku")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yr15b")
+
+[node name="HomeIcon" type="Sprite2D" parent="home" unique_id=27121933]
+position = Vector2(32.5, 28)
+scale = Vector2(0.12695305, 0.11328125)
+texture = ExtResource("3_kdbca")
+
+[node name="skip" type="Button" parent="." unique_id=943941042]
+layout_mode = 0
+offset_top = 526.00006
+offset_right = 48.959263
+offset_bottom = 540.7775
+scale = Vector2(23.529768, 8.262663)
+
+[node name="text" type="Label" parent="." unique_id=1356982123]
+layout_mode = 0
+offset_left = 44.000004
+offset_top = 543.0
+offset_right = 1070.0
+offset_bottom = 578.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=219536386]
+stream = ExtResource("4_5trvs")
+volume_db = 2.7
+autoplay = true
+parameters/looping = true
